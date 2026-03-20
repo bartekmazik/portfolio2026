@@ -14,7 +14,7 @@ const Section = ({
 }) => {
   return (
     <section
-      className={`h-[80vh] lg:h-[60vh] px-8 flex flex-col ${className}`}
+      className={`min-h-[80vh] lg:min-h-[60vh] px-8 pb-36 flex flex-col ${className}`}
       id={id}
     >
       {headerText && <Header text={headerText} />}

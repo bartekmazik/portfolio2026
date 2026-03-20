@@ -5,7 +5,7 @@ import Section from "../ui/section";
 const About = () => {
   return (
     <Section id="#about" headerText="About">
-      <div className="relative w-full h-1/3">
+      <div className="relative w-full h-[25vh]">
         <Image
           src="/about-img.jpg"
           fill

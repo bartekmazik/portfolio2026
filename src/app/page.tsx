@@ -1,6 +1,9 @@
 import About from "@/components/sections/about";
+import Contact from "@/components/sections/contact";
 import Experience from "@/components/sections/experience";
 import Hero from "@/components/sections/hero";
+import Projects from "@/components/sections/projects";
+import TechStack from "@/components/sections/techstack";
 import { getImageProps } from "next/image";
 
 function getBackgroundImage(srcSet = "") {
@@ -21,10 +24,13 @@ export default function Home() {
   const backgroundImage = getBackgroundImage(srcSet);
 
   return (
-    <main className="font-noto h-screen w-screen" style={{ backgroundImage }}>
+    <main className="font-noto w-screen" style={{ backgroundImage }}>
       <Hero />
       <About />
       <Experience />
+      <TechStack />
+      <Projects />
+      <Contact />
     </main>
   );
 }

@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# Crawl delay (in seconds) - Adjust based on your server capacity
+Crawl-delay: 1
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://bartlomiej-mazik.com/sitemap.xml

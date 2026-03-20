@@ -1,11 +1,27 @@
 import React from "react";
 
-const Button = ({ text, action }: { text: string; action?: () => void }) => {
+const style =
+  "border border-foreground font-inter uppercase font-medium min-w-32 px-8 py-1 text-center";
+
+const Button = ({
+  text,
+  action,
+  href,
+}: {
+  text: string;
+  action?: () => void;
+  href?: string;
+}) => {
+  if (href) {
+    return (
+      <a className={style} href={href}>
+        {text}
+      </a>
+    );
+  }
+
   return (
-    <button
-      className="border border-foreground font-inter uppercase font-medium min-w-32 px-8 py-1"
-      onClick={action}
-    >
+    <button className={style} onClick={action}>
       {text}
     </button>
   );
