@@ -16,7 +16,8 @@ const interFont = Inter({
   subsets: ["latin"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bartlomiej-mazik.com";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://bartlomiej-mazik.com";
 const AUTHOR_NAME = "Bartłomiej Mazik";
 
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     email: false,
     telephone: false,
   },
-  
+
   // OpenGraph
   openGraph: {
     type: "website",
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
+
   // Twitter Card
   twitter: {
     card: "summary_large_image",
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/og-image.jpg`],
     creator: "@bartlomiejmazik",
   },
-  
+
   // Verification and alternate languages
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
-  
+
   // Additional metadata
   robots: {
     index: true,
@@ -106,7 +107,7 @@ export default function RootLayout({
       <head>
         {/* Analytics and Tracking */}
         <GoogleAnalytics />
-        
+
         {/* JSON-LD Schema Markup */}
         <PersonJsonLd
           name={AUTHOR_NAME}
@@ -127,26 +128,34 @@ export default function RootLayout({
             "https://twitter.com/bartlomiejmazik",
           ]}
         />
-        
+
         {/* Favicon and web app manifest */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        
+
         {/* Preconnect to external resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
+
         {/* Viewport and charset */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
       </head>
       <body
-        className={`${notoFont.variable} ${interFont.variable} antialiased `}
+        style={{ backgroundImage: 'url("/bg.jpg")' }}
+        className={`${notoFont.variable} ${interFont.variable} antialiased flex flex-col items-center w-full overflow-x-hidden`}
       >
         <Navbar />
         {children}

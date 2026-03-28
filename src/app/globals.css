@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+nav,
+[data-navbar] {
+  height: 64px !important;
+  min-height: 64px !important;
+}

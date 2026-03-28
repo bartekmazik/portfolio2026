@@ -20,11 +20,11 @@ function getBackgroundImage(srcSet = "") {
 export default function Home() {
   const {
     props: { srcSet },
-  } = getImageProps({ alt: "", width: 3000, height: 3000, src: "/bg.jpg" });
+  } = getImageProps({ alt: "", width: 1000, height: 1000, src: "/bg.jpg" });
   const backgroundImage = getBackgroundImage(srcSet);
 
   return (
-    <main className="font-noto w-screen" style={{ backgroundImage }}>
+    <main className="font-noto w-full px-8 md:px-12 lg:px-[25vw]">
       <Hero />
       <About />
       <Experience />

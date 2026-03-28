@@ -1,8 +1,9 @@
 import React from "react";
 
 const style =
-  "border border-foreground font-inter uppercase font-medium min-w-32 px-8 py-1 text-center";
-
+  "border border-foreground font-inter cursor:pointer uppercase font-medium min-w-32 px-8 py-1 text-center " +
+  "transition-all duration-200 ease-out  " +
+  "hover:bg-foreground hover:text-background";
 const Button = ({
   text,
   action,

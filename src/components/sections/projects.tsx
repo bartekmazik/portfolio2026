@@ -36,18 +36,20 @@ const Project = ({
 const Projects = () => {
   return (
     <Section id="projects" headerText="Projects">
-      <Project
-        imgSrc="/kuznia.png"
-        title="Kuźnia Billert"
-        description="E-comerce website made for a local blacksmith. "
-        href="kuzniabillert.pl"
-      />
-      <Project
-        imgSrc="/kuznia.png"
-        title="Kuźnia Billert"
-        description="E-comerce website made for a local blacksmith. "
-        href="kuzniabillert.pl"
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-4">
+        <Project
+          imgSrc="/kuznia.png"
+          title="Kuźnia Billert"
+          description="E-comerce website made for a local blacksmith. "
+          href="kuzniabillert.pl"
+        />
+        <Project
+          imgSrc="/kuznia.png"
+          title="Kuźnia Billert"
+          description="E-comerce website made for a local blacksmith. "
+          href="kuzniabillert.pl"
+        />
+      </div>
     </Section>
   );
 };

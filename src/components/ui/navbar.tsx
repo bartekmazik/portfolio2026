@@ -1,17 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from "motion/react";
 
 const navLinks = ["About", "Experience", "Tech Stack", "Projects", "Contact"];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 10);
+  });
 
   return (
     <>
-      <div className="w-screen h-12 lg:h-16 flex flex-row items-center lg:justify-between justify-end p-2 relative z-50">
+      <motion.nav
+        className="sticky inset-0 md:px-12 lg:px-[25vw] left-0 w-full flex flex-row items-center lg:justify-center justify-end px-4 sm:px-6 z-50"
+        animate={{
+          backgroundColor:
+            isOpen || !scrolled ? "rgba(10,8,6,0)" : "rgba(10,8,6,0.95)",
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <div className="hidden lg:flex items-center gap-8 max-w-6xl w-full">
+          {navLinks.map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase().replace(" ", "-")}`}
+              className="font-inter text-sm uppercase hover:opacity-70 transition-opacity duration-200"
+            >
+              {link}
+            </a>
+          ))}
+        </div>
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
           {isOpen ? (
             <X width={32} height={32} />
@@ -19,7 +49,7 @@ const Navbar = () => {
             <Menu width={32} height={32} />
           )}
         </button>
-      </div>
+      </motion.nav>
 
       <AnimatePresence>
         {isOpen && (

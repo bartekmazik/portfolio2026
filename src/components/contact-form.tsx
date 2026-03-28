@@ -44,7 +44,7 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-4 w-full max-w-lg"
+      className="flex flex-col gap-4 w-full max-w-1/2"
     >
       <div className="flex flex-col gap-1">
         <input
@@ -72,7 +72,7 @@ export const ContactForm = () => {
         <textarea
           {...register("message")}
           placeholder="Message"
-          rows={5}
+          rows={8}
           className={`${inputStyle} resize-none`}
         />
         {errors.message && (

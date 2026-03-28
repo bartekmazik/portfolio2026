@@ -14,11 +14,13 @@ const Section = ({
 }) => {
   return (
     <section
-      className={`min-h-[80vh] lg:min-h-[60vh] px-8 pb-36 flex flex-col ${className}`}
+      className={`min-h-[60vh] lg:min-h-[40vh] pb-20 lg:pb-32 flex flex-col ${className}`}
       id={id}
     >
-      {headerText && <Header text={headerText} />}
-      {children}
+      <div className="w-full max-w-6xl mx-auto flex flex-col">
+        {headerText && <Header text={headerText} />}
+        {children}
+      </div>
     </section>
   );
 };
