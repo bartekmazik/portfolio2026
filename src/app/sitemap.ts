@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/#about`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.6,
     },
     {
       url: `${SITE_URL}/#experience`,
@@ -35,13 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/#tech-stack`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${SITE_URL}/#contact`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.4,
     },
   ];
 
