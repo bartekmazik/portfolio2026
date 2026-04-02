@@ -27,21 +27,21 @@ const Footer = () => {
       <div className="w-full max-w-6xl mx-auto flex flex-col">
         <hr className="w-full text-foreground mb-4"></hr>
         <div className="flex items-center justify-between">
-        <p className="text-sm ">
-          © {new Date().getFullYear()} Bartłomiej Mazik
-        </p>
+          <p className="text-sm ">
+            © {new Date().getFullYear()} Bartłomiej Mazik
+          </p>
 
-        <div className="flex items-center gap-4 lg:gap-6">
-          <SocialButton
-            src="Github.svg"
-            href="https://github.com/bartekmazik"
-          />
-          <SocialButton
-            src="Linkedin.svg"
-            href="https://www.linkedin.com/in/bartlomiejmazik/"
-          />
+          <div className="flex items-center gap-4 lg:gap-6">
+            <SocialButton
+              src="Github.svg"
+              href="https://github.com/bartekmazik"
+            />
+            <SocialButton
+              src="Linkedin.svg"
+              href="https://www.linkedin.com/in/bartlomiejmazik/"
+            />
+          </div>
         </div>
-      </div>
       </div>
     </footer>
   );
