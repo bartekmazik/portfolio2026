@@ -20,7 +20,7 @@ function getBackgroundImage(srcSet = "") {
 export default function Home() {
   const {
     props: { srcSet },
-  } = getImageProps({ alt: "", width: 1000, height: 1000, src: "/bg.jpg" });
+  } = getImageProps({ alt: "", width: 1000, height: 1000, src: "/bg.webp" });
   const backgroundImage = getBackgroundImage(srcSet);
 
   return (

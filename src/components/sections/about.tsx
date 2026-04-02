@@ -8,7 +8,7 @@ const About = () => {
         <div className="lg:w-1/3">
           <div className="relative w-full h-[45vh] sm:h-[35vh]">
             <Image
-              src="/bartlomiej-mazik.jpg"
+              src="/bartlomiej-mazik.webp"
               fill
               alt="me"
               className="object-fit object-top object-cover"

@@ -153,7 +153,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        style={{ backgroundImage: 'url("/bg.jpg")' }}
+        style={{ backgroundImage: 'url("/bg.webp")' }}
         className={`${notoFont.variable} ${interFont.variable} antialiased flex flex-col items-center w-full overflow-x-hidden`}
       >
         <Navbar />
