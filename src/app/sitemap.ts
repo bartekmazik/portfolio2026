@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+export const revalidate = false;
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bartlomiej-mazik.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
