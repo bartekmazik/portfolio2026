@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // SSG and Performance optimization
-  output: "export",
-  
   // Strict mode for better error detection
   reactStrictMode: true,
   
