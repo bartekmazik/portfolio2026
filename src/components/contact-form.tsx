@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
-import { sendContactEmail } from "@/actions/contact";
 import Button from "./ui/button";
 
 const schema = z.object({
@@ -32,12 +31,22 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setStatus("loading");
-    const result = await sendContactEmail(data);
-    if (result.error) {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (!response.ok || result.error) {
+        setStatus("error");
+      } else {
+        setStatus("success");
+        reset();
+      }
+    } catch (error) {
       setStatus("error");
-    } else {
-      setStatus("success");
-      reset();
     }
   };
 
