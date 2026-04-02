@@ -3,12 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Strict mode for better error detection
   reactStrictMode: true,
-  
+
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
   },
-  
+
   // Headers for security and SEO
   async headers() {
     return [
@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  
+
   // Redirects for old URLs (if needed in future)
   async redirects() {
     return [];
