@@ -12,7 +12,7 @@ const TechCategory = ({ label, text }: { label: string; text: string }) => {
 
 const TechStack = () => {
   return (
-    <Section id="tech" headerText="Tech Stack">
+    <Section id="tech-stack" headerText="Tech Stack">
       <div className="flex flex-col italic items-end pt-4 pb-8 text-sm lg:items-start">
         <p>,,If all you have is a hammer, everything looks like a nail”</p>
         <p className="opacity-80">Abraham Maslow</p>
@@ -20,27 +20,29 @@ const TechStack = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         <TechCategory
           label="FRONT-END"
-          text="Next.js, React.js, TypeScript, TailwindCSS"
+          text="Next.js, React, TypeScript, JavaScript,
+TailwindCSS, HTML5, CSS3, Responsive Design"
         />
         <TechCategory
           label="BACK-END"
-          text="Next.js, React.js, TypeScript, TailwindCSS"
+          text="Next.js, NestJS, Express.js, Node.js, REST API, Axios
+"
         />
         <TechCategory
           label="DATABASE"
-          text="Next.js, React.js, TypeScript, TailwindCSS"
+          text="Prisma ORM,
+PostgreSQL, MongoDB, Supabase"
         />
         <TechCategory
           label="SEO"
-          text="Next.js, React.js, TypeScript, TailwindCSS"
+          text="Google Analytics 4 (GA4), Screaming Frog, SEO On-page,
+SEO Techniczne, AnswerThePublic, Ubersuggest
+"
         />
-        <TechCategory
-          label="TESTING"
-          text="Next.js, React.js, TypeScript, TailwindCSS"
-        />
+        <TechCategory label="TESTING" text="Jest, Selenium, Postman" />
         <TechCategory
           label="TOOLS"
-          text="Next.js, React.js, TypeScript, TailwindCSS"
+          text="Docker, Git, GitHub, CI/CD, Vercel, Figma, WordPress"
         />
       </div>
     </Section>

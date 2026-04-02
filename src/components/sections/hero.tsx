@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
       <div className="pt-6 lg:pt-8 flex flex-row gap-4">
         <Button text="CONTACT" href="#contact" />
-        <Button text="CV" href="/BartłomiejMazikCV.pdf" />
+        <Button text="CV" href="/CV_Bartlomiej_Mazik.pdf" external />
       </div>
     </Section>
   );

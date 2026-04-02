@@ -44,7 +44,7 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-4 w-full max-w-1/2"
+      className="flex flex-col gap-4 w-full sm:max-w-1/2"
     >
       <div className="flex flex-col gap-1">
         <input

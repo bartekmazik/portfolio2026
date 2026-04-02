@@ -24,9 +24,12 @@ const SocialButton = ({ src, href }: { src: string; href: string }) => {
 const Footer = () => {
   return (
     <footer className="w-full px-8 md:px-12 lg:px-[25vw] py-6 lg:py-8 font-noto">
-      <hr className="w-full text-foreground mb-4 "></hr>
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <p className="text-sm ">© 2026 Bartłomiej Mazik</p>
+      <div className="w-full max-w-6xl mx-auto flex flex-col">
+        <hr className="w-full text-foreground mb-4"></hr>
+        <div className="flex items-center justify-between">
+        <p className="text-sm ">
+          © {new Date().getFullYear()} Bartłomiej Mazik
+        </p>
 
         <div className="flex items-center gap-4 lg:gap-6">
           <SocialButton
@@ -38,6 +41,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/bartlomiejmazik/"
           />
         </div>
+      </div>
       </div>
     </footer>
   );

@@ -17,7 +17,7 @@ const interFont = Inter({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://bartlomiej-mazik.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://bartlomiejmazik.dev";
 const AUTHOR_NAME = "Bartłomiej Mazik";
 
 export const metadata: Metadata = {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "Full-stack developer specializing in Next.js, Nest.js, and SEO optimization. Building scalable web applications with modern technologies.",
     images: [
       {
-        url: `${SITE_URL}/og-image.jpg`,
+        url: `${SITE_URL}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: `${AUTHOR_NAME}`,
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: `${AUTHOR_NAME} | Full-Stack Developer & SEO Specialist`,
     description:
       "Full-stack developer specializing in Next.js, Nest.js, and SEO optimization. Building scalable web applications with modern technologies.",
-    images: [`${SITE_URL}/og-image.jpg`],
+    images: [`${SITE_URL}/opengraph-image.jpg`],
     creator: "@bartlomiejmazik",
   },
 
@@ -123,9 +123,8 @@ export default function RootLayout({
             "Web Development",
           ]}
           sameAs={[
-            "https://github.com/bartlomiej",
-            "https://linkedin.com/in/bartlomiej",
-            "https://twitter.com/bartlomiejmazik",
+            "https://github.com/bartekmazik",
+            "https://linkedin.com/in/bartlomiejmazik",
           ]}
         />
 

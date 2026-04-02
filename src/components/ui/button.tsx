@@ -8,14 +8,21 @@ const Button = ({
   text,
   action,
   href,
+  external = false,
 }: {
   text: string;
   action?: () => void;
   href?: string;
+  external?: boolean;
 }) => {
   if (href) {
     return (
-      <a className={style} href={href}>
+      <a
+        className={style}
+        href={href}
+        target={external ? "_blank" : "_self"}
+        rel={external ? "noopener noreferrer nofollow" : undefined}
+      >
         {text}
       </a>
     );

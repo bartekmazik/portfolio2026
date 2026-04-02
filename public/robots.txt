@@ -15,4 +15,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://bartlomiej-mazik.com/sitemap.xml
+Sitemap: https://bartlomiejmazik.dev/sitemap.xml
