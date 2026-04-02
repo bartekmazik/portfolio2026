@@ -28,17 +28,11 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      return Response.json(
-        { error: "Failed to send email" },
-        { status: 500 }
-      );
+      return Response.json({ error: "Failed to send email" }, { status: 500 });
     }
 
     return Response.json({ success: true });
   } catch (error) {
-    return Response.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }

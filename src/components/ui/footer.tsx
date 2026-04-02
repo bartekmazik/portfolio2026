@@ -33,11 +33,11 @@ const Footer = () => {
 
           <div className="flex items-center gap-4 lg:gap-6">
             <SocialButton
-              src="Github.svg"
+              src="github.svg"
               href="https://github.com/bartekmazik"
             />
             <SocialButton
-              src="Linkedin.svg"
+              src="linkedin.svg"
               href="https://www.linkedin.com/in/bartlomiejmazik/"
             />
           </div>
